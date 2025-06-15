@@ -1,0 +1,82 @@
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.lock
+package-lock.json
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# projectile
+.projectile
+
+# elisp
+*-autoloads.el
+.dir-locals.el
+
+# Etags
+TAGS
+
+# Gtags
+GPATH
+GRTAGS
+GTAGS
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# Flymake-mode
+*_flymake.*
+
+# reftex files
+*.rel
+
+# Editorconfig
+.editorconfig
+
+# Directories
+.backup
+cache
+
+# Clojure
+/target
+/classes
+/checkouts
+profiles.clj
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+/.prepl-port
+.nrepl-port
+.hgignore
+.hg/
+.idea/
+.clj-kondo/
+.clj-kondo/.cache/
+.cpcache
+.cpcache/
+.lsp/
+.m2
+result*
+.direnv/
+.devenv*
+devenv.local.nix
+
+# Java
+src-java/*.log
+
+# Javascript output
+public/js
