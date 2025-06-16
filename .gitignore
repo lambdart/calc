@@ -34,6 +34,7 @@ GTAGS
 # Org-mode
 .org-id-locations
 *_archive
+README.org
 
 # Flymake-mode
 *_flymake.*
