@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+  calc:
+    build:
+      context: .
+      dockerfile: docker/calc.dockerfile
+    volumes:
+      # cache packages (maven and git)
+      - /root/.m2
+      - /root/.clojure
+      - /root/.gitlibs
+    ports:
+      - "8080:8080"
+    working_dir: /app
+    entrypoint: ["./docker/calc-entrypoint.sh"]
+    restart: always
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx.dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - calc
+    restart: always
+
+volumes:
+  db-data:
