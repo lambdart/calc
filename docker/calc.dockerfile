@@ -1,8 +1,7 @@
-FROM clojure:openjdk-18-tools-deps-alpine
+FROM clojure:temurin-24-tools-deps-alpine
 
 # Install dependencies
-RUN apk add --no-cache -u \
-    rlwrap && \
+RUN apk add --no-cache -u rlwrap && \
     rm -rf /var/cache/apk/*
 
 # create default app directory
