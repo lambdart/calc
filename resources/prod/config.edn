@@ -1,0 +1,5 @@
+{
+ :server/jetty  {:app :calc/app :port 8080}
+ :calc/app      {:name "calc" :env "prod"}
+ :calc/logger   {:app :calc/app}
+ }
