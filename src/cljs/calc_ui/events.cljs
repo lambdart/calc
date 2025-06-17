@@ -3,18 +3,12 @@
             [re-frame.core :as re-frame]
             [day8.re-frame.http-fx]
             [day8.re-frame.tracing :refer-macros [fn-traced]]
+            [calc-ui.db :as db]
             [calc-ui.api :as api]))
 
-(defn ajax-request
-  [uri method params success failure]
-  {:http-xhrio {:uri uri
-                :method method
-                :params params
-                :timeout 500
-                :format (ajax/url-request-format)
-                :response-format (ajax/json-response-format {:keywords? true})
-                :on-success [success]
-                :on-failure [failure]}})
+(re-frame/reg-event-db
+ ::initialize
+ (fn [_ _] {:name "db"}))
 
 (re-frame/reg-event-db
  ::update-form
