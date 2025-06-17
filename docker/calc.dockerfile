@@ -15,3 +15,6 @@ WORKDIR /app
 
 # install deps
 RUN clj -P
+
+# build static app.js
+RUN clj -Mcljsbuild
