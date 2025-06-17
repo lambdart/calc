@@ -13,5 +13,3 @@
     (doseq [f [#(server/restart host port type)
                #(u/start-publisher! {:type :console})]]
       (f))))
-
-;; (-main)
