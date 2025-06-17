@@ -1,40 +1,42 @@
 
 # Table of Contents
 
-1.  [Introduction](#org519ade4)
-2.  [Version](#orgebc567d)
-3.  [Dependencies](#orga6d2c74)
-4.  [Tested on](#orgb5509b8)
-5.  [Installation](#org44a35ea)
-6.  [Configuration](#org93c9ac0)
-7.  [Testing](#orged2c95a)
-8.  [LICENSE](#orga66c823)
-9.  [EOF](#orgc1d9db4)
+1.  [Introduction](#org5eb875f)
+2.  [Version](#org1c31707)
+3.  [Dependencies](#orga45572d)
+4.  [Tested on](#org67936ad)
+5.  [Installation](#org87213e0)
+6.  [Configuration](#orgb1328c5)
+7.  [Testing](#org47384cc)
+    1.  [The Frontend](#org1121df7)
+    2.  [The API server](#orgfd8bd04)
+8.  [LICENSE](#orge0db200)
+9.  [EOF](#org933140d)
 
 
 
-<a id="org519ade4"></a>
+<a id="org5eb875f"></a>
 
 # Introduction
 
 An simple full stack application.
 
 
-<a id="orgebc567d"></a>
+<a id="org1c31707"></a>
 
 # Version
 
 Alpha - 0.0.1
 
 
-<a id="orga6d2c74"></a>
+<a id="orga45572d"></a>
 
 # Dependencies
 
 All the dependencies are described on the `deps.edn` file, check it out :)
 
 
-<a id="orgb5509b8"></a>
+<a id="org67936ad"></a>
 
 # Tested on
 
@@ -68,34 +70,49 @@ All the dependencies are described on the `deps.edn` file, check it out :)
 </tr>
 
 <tr>
-<td class="org-left">Chromium</td>
-<td class="org-right">137.0.7151.55</td>
+<td class="org-left">Firefox</td>
+<td class="org-right">139.0.4</td>
 </tr>
 </tbody>
 </table>
 
 
-<a id="org44a35ea"></a>
+<a id="org87213e0"></a>
 
 # Installation
 
 The simplest way is to build the docker image and run the container, the
-auto.sh scripts will help you on that, just
+auto.sh scripts will help you on that, just use the commands below:
 
     
-    ./scripts/auto.sh build
+    ./scripts/auto.sh -s calc build
+    ./scripts/auto.sh -s nginx build
     ./scripts/auto.sh setup
     ./scripts/auto.sh start
 
 
-<a id="org93c9ac0"></a>
+<a id="orgb1328c5"></a>
 
 # Configuration
 
 
-<a id="orged2c95a"></a>
+<a id="org47384cc"></a>
 
 # Testing
+
+
+<a id="org1121df7"></a>
+
+## The Frontend
+
+It's use the Firefox and point the URL to `http://localhost:3000`.
+Select one operation and click in the button run, if everything works
+properly the results will appear at the bottom of the form.
+
+
+<a id="orgfd8bd04"></a>
+
+## The API server
 
 It's possible to use curl or any http client of choice to access the API.
 In case you are running this at your local host and the curl command is
@@ -106,14 +123,14 @@ installed, just type the following commands at the terminal emulator of use:
     curl "http://localhost:8080/v1/reset"
 
 
-<a id="orga66c823"></a>
+<a id="orge0db200"></a>
 
 # LICENSE
 
 MIT
 
 
-<a id="orgc1d9db4"></a>
+<a id="org933140d"></a>
 
 # EOF
 
