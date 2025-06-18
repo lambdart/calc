@@ -1,23 +1,23 @@
 (ns calc.handler
   (:require [calc.util :as util]
-            [calc.action :as action]))
+            [calc.op :as op]))
 
 (defmacro gen-handler
-  "Generate action handler."
-  [{action-id :action-id
-    action-fn :action-fn}]
+  "Generate op handler."
+  [{op-id :op-id
+    op-fn :op-fn}]
   `(fn [request#]
      (-> request#
-         (#(~action-fn %))
-         (#(util/->resp-map ~action-id %))
+         (#(~op-fn %))
+         (#(util/->resp-map ~op-id %))
          (util/ok))))
 
 (def increment
   "Increment handler."
-  (gen-handler {:action-id :increment
-                :action-fn action/increment}))
+  (gen-handler {:op-id :increment
+                :op-fn op/increment}))
 
 (def reset
   "Reset handler."
-  (gen-handler {:action-id :reset
-                :action-fn action/reset}))
+  (gen-handler {:op-id :reset
+                :op-fn op/reset}))
