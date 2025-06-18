@@ -2,6 +2,10 @@
  :calc/app      {:name "calc" :env "dev"}
  :calc/http     {:host "0.0.0.0"
                 :port 8080
-                :type :jetty}
+                 :type :jetty}
+ :calc/db       {:client {:server-type :dev-local
+                          :system "dev"
+                          :storage-dir "/root/.datomic/storage/"}
+                 :db-name {:db-name "ops"}}
  :calc/logger   {:app :calc/app}
  }
