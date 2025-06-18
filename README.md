@@ -1,42 +1,43 @@
 
 # Table of Contents
 
-1.  [Introduction](#org5eb875f)
-2.  [Version](#org1c31707)
-3.  [Dependencies](#orga45572d)
-4.  [Tested on](#org67936ad)
-5.  [Installation](#org87213e0)
-6.  [Configuration](#orgb1328c5)
-7.  [Testing](#org47384cc)
-    1.  [The Frontend](#org1121df7)
-    2.  [The API server](#orgfd8bd04)
-8.  [LICENSE](#orge0db200)
-9.  [EOF](#org933140d)
+1.  [Introduction](#orgb57715b)
+2.  [Version](#org499becd)
+3.  [Dependencies](#org144a3a2)
+4.  [Tested on](#org8e79ce6)
+5.  [Installation](#org34404d3)
+6.  [Configuration](#orgc99fe21)
+7.  [Testing](#orgcf77073)
+    1.  [The Frontend](#org067ddb1)
+    2.  [The API server](#org1061c30)
+8.  [LICENSE](#orge6fd8c3)
+9.  [References](#orgeea2289)
+10. [EOF](#org0b76339)
 
 
 
-<a id="org5eb875f"></a>
+<a id="orgb57715b"></a>
 
 # Introduction
 
 An simple full stack application.
 
 
-<a id="org1c31707"></a>
+<a id="org499becd"></a>
 
 # Version
 
 Alpha - 0.0.1
 
 
-<a id="orga45572d"></a>
+<a id="org144a3a2"></a>
 
 # Dependencies
 
 All the dependencies are described on the `deps.edn` file, check it out :)
 
 
-<a id="org67936ad"></a>
+<a id="org8e79ce6"></a>
 
 # Tested on
 
@@ -77,7 +78,7 @@ All the dependencies are described on the `deps.edn` file, check it out :)
 </table>
 
 
-<a id="org87213e0"></a>
+<a id="org34404d3"></a>
 
 # Installation
 
@@ -91,17 +92,25 @@ auto.sh scripts will help you on that, just use the commands below:
     ./scripts/auto.sh start
 
 
-<a id="orgb1328c5"></a>
+<a id="orgc99fe21"></a>
 
 # Configuration
 
+The configuration file can be found at the `resources/dev`,
+`resources/prod` and `resources/test`. The default behaviour is to load the
+`resources/dev/config.edn` edn and docker containers will be load with
+`resources/dev/config-docker.edn`.
 
-<a id="org47384cc"></a>
+See the `deps.edn` file for more information on how to invoke Clojure with
+arbitrary configuration file.
+
+
+<a id="orgcf77073"></a>
 
 # Testing
 
 
-<a id="org1121df7"></a>
+<a id="org067ddb1"></a>
 
 ## The Frontend
 
@@ -110,7 +119,7 @@ Select one operation and click in the button run, if everything works
 properly the results will appear at the bottom of the form.
 
 
-<a id="orgfd8bd04"></a>
+<a id="org1061c30"></a>
 
 ## The API server
 
@@ -123,14 +132,26 @@ installed, just type the following commands at the terminal emulator of use:
     curl "http://localhost:8080/v1/reset"
 
 
-<a id="orge0db200"></a>
+<a id="orge6fd8c3"></a>
 
 # LICENSE
 
 MIT
 
 
-<a id="org933140d"></a>
+<a id="orgeea2289"></a>
+
+# References
+
+1.  <https://clojuredocs.org>
+2.  <https://clojurescript.org/guides>
+3.  <http://pedestal.io/reference/interceptors>
+4.  <https://github.com/day8/re-frame>
+5.  <https://day8.github.io/re-frame/re-frame>
+6.  <https://docs.datomic.com/datomic-overview.html>
+
+
+<a id="org0b76339"></a>
 
 # EOF
 
