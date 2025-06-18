@@ -1,6 +1,7 @@
 (ns calc.main
   (:require [calc.server :as server]
             [calc.config :as config]
+            [calc.db.core :as db]
             [com.brunobonacci.mulog :as u]))
 
 (defn -main
@@ -11,5 +12,6 @@
          type :type
          port :port} (-> :calc/http config/get-edn-value)]
     (doseq [f [#(server/restart host port type)
-               #(u/start-publisher! {:type :console})]]
+               #(u/start-publisher! {:type :console})
+               db/setup-db]]
       (f))))
